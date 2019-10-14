@@ -7,6 +7,7 @@ var handleError = function(err, res) {
   res.writeHead(404, {
     'Content-Type': 'text/html'
   });
+  //Redirects to /app/error.html - Bronze Challenge
   res.write('<meta http-equiv="Refresh" content="0; url=/error.html" />');
   res.end();
 };
@@ -23,6 +24,7 @@ var server = http.createServer(function(req, res) {
     }
   });
 
+  //Get MIME type and output it to console - Silver Challenge
   var getMime = mime.getType(filePath)
     console.log('MIME Type is: ' + getMime);
 });
