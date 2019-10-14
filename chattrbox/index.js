@@ -23,9 +23,7 @@ var server = http.createServer(function(req, res) {
     }
   });
 
-  var getMime = mime.getType(req.url)
-  fs.readFile(getMime, function(err, data) {
-    console.log('MIME Type is: ' + data);
-  });
+  var getMime = mime.getType(filePath)
+    console.log('MIME Type is: ' + getMime);
 });
 server.listen(3000);
