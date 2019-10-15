@@ -9,8 +9,8 @@ var handleError = function(err, res) {
     'Content-Type': 'text/html'
   });
   //Redirects 404 errors to /app/error.html - Bronze Challenge
-  res.write('<meta http-equiv="Refresh" content="0; url=/error.html" />');
-  res.end();
+  //res.write('<meta http-equiv="Refresh" content="0; url=/error.html" />');
+  res.end('<meta http-equiv="Refresh" content="0; url=/error.html" />');
 };
 
 var server = http.createServer(function(req, res) {
